@@ -2,7 +2,9 @@ function myScript() {
   console.log('hello world');
   console.log(eldontes());
   console.log(kivalogatas());
+  console.log(sorozatszamitas());
 }
+
 function eldontes() {
   const T = [1, 2, 3, 4, 5];
   const e = 1;
@@ -36,4 +38,15 @@ function kivalogatas() {
     X: X,
     Y: Y,
   };
+}
+
+function sorozatszamitas() {
+  const T = [1, 2, 3, 4, 5];
+  let sum = 0;
+  let average = 0;
+  for (let i = 0; i < T.length; i++) {
+    sum += T[i];
+  }
+  average = sum / T.length;
+  return `osszeg: ${sum} atlag: ${average}`;
 }
