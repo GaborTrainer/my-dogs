@@ -3,6 +3,7 @@ function myScript() {
   console.log(eldontes());
   console.log(kivalogatas());
   console.log(sorozatszamitas());
+  console.log(megszamolas());
 }
 
 function eldontes() {
@@ -50,5 +51,16 @@ function sorozatszamitas() {
   return {
     Sum: sum,
     Avr: average
+  }
+}
+
+function megszamolas() {
+  const T = [1, 2, 3, 4, 5];
+  let sum = 0;
+  for (let i = 0; i < T.length; i++) {
+    sum += T[i];
+  }
+  return {
+    Sum: sum
   }
 }
