@@ -4,6 +4,7 @@ function myScript() {
   console.log(kivalogatas());
   console.log(sorozatszamitas());
   console.log(megszamolas());
+  console.log(maximumKivalasztas());
 }
 
 function eldontes() {
@@ -62,5 +63,18 @@ function megszamolas() {
   }
   return {
     Sum: sum
+  }
+}
+
+function maximumKivalasztas() {
+  const T = [1, 2, 3, 4, 5];
+  let max = 0;
+  for (let i = 0; i < T.length; i++) {
+    if (T[i] > max) {
+      max = T[i];
+    }
+  }
+  return {
+    Max: max
   }
 }
