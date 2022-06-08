@@ -6,6 +6,7 @@ function myScript() {
   console.log(megszamolas());
   console.log(maximumKivalasztas());
   console.log(mimimumKivalasztas());
+  console.log(metszetkepzes());
 }
 
 function eldontes() {
@@ -90,5 +91,26 @@ function mimimumKivalasztas() {
   }
   return {
     min: min
+  }
+}
+
+function metszetkepzes() {
+  const T = [1, 2, 3, 4, 5];
+  const O = [4, 5, 6, 7, 8, 9];
+  const Unio = [];
+
+  let j;
+  let k = 0;
+
+  for (let i = 0; i < T.length; i++) {
+    j = 0;
+    while (j < O.length && O[j] != T[i])
+      j++;
+    if (j < O.length) {
+      Unio[k++] = T[i];
+    }
+  }
+  return {
+    unio: Unio
   }
 }
