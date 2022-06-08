@@ -38,8 +38,8 @@ function kivalogatas() {
     }
   }
   return {
-    X: X,
-    Y: Y,
+    x: X,
+    y: Y,
   };
 }
 
@@ -51,8 +51,8 @@ function sorozatszamitas() {
   }
   const average = sum / T.length;
   return {
-    Sum: sum,
-    Avr: average
+    sum: sum,
+    avr: average
   }
 }
 
@@ -63,7 +63,7 @@ function megszamolas() {
     sum += T[i];
   }
   return {
-    Sum: sum
+    sum: sum
   }
 }
 
@@ -76,7 +76,7 @@ function maximumKivalasztas() {
     }
   }
   return {
-    Max: max
+    max: max
   }
 }
 
@@ -89,6 +89,6 @@ function mimimumKivalasztas() {
     }
   }
   return {
-    Min: min
+    min: min
   }
 }
