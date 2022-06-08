@@ -5,6 +5,7 @@ function myScript() {
   console.log(sorozatszamitas());
   console.log(megszamolas());
   console.log(maximumKivalasztas());
+  console.log(mimimumKivalasztas());
 }
 
 function eldontes() {
@@ -76,5 +77,18 @@ function maximumKivalasztas() {
   }
   return {
     Max: max
+  }
+}
+
+function mimimumKivalasztas() {
+  const T = [1, 2, 3, 4, 5];
+  let min = 5;
+  for (let i = 0; i < T.length; i++) {
+    if (T[i] < min) {
+      min = T[i];
+    }
+  }
+  return {
+    Min: min
   }
 }
