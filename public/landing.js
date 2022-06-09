@@ -10,10 +10,10 @@ function myScript() {
 }
 
 function eldontes() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
   const e = 1;
-  for (let i = 0; i < T.length; i++) {
-    if (T[i] === e) {
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] === e) {
       return true;
     }
   }
@@ -21,36 +21,36 @@ function eldontes() {
 }
 
 function kivalogatas() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
 
-  const X = [];
+  const x = [];
   let j = 0;
 
-  const Y = [];
+  const y = [];
   let k = 0;
 
-  for (let i = 0; i < T.length; i++) {
-    if (T[i] % 2 === 0) {
-      X[j] = T[i];
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] % 2 === 0) {
+      x[j] = t[i];
       j++;
     } else {
-      Y[k] = T[i];
+      y[k] = t[i];
       k++;
     }
   }
   return {
-    x: X,
-    y: Y,
+    x: x,
+    y: y,
   };
 }
 
 function sorozatszamitas() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
   let sum = 0;
-  for (let i = 0; i < T.length; i++) {
-    sum += T[i];
+  for (let i = 0; i < t.length; i++) {
+    sum += t[i];
   }
-  const average = sum / T.length;
+  const average = sum / t.length;
   return {
     sum: sum,
     avr: average
@@ -58,10 +58,10 @@ function sorozatszamitas() {
 }
 
 function megszamolas() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
   let sum = 0;
-  for (let i = 0; i < T.length; i++) {
-    sum += T[i];
+  for (let i = 0; i < t.length; i++) {
+    sum += t[i];
   }
   return {
     sum: sum
@@ -69,11 +69,11 @@ function megszamolas() {
 }
 
 function maximumKivalasztas() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
   let max = 0;
-  for (let i = 0; i < T.length; i++) {
-    if (T[i] > max) {
-      max = T[i];
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] > max) {
+      max = t[i];
     }
   }
   return {
@@ -82,11 +82,11 @@ function maximumKivalasztas() {
 }
 
 function mimimumKivalasztas() {
-  const T = [1, 2, 3, 4, 5];
+  const t = [1, 2, 3, 4, 5];
   let min = 5;
-  for (let i = 0; i < T.length; i++) {
-    if (T[i] < min) {
-      min = T[i];
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] < min) {
+      min = t[i];
     }
   }
   return {
@@ -95,22 +95,22 @@ function mimimumKivalasztas() {
 }
 
 function metszetkepzes() {
-  const T = [1, 2, 3, 4, 5];
-  const O = [4, 5, 6, 7, 8, 9];
-  const Unio = [];
+  const t = [1, 2, 3, 4, 5];
+  const o = [4, 5, 6, 7, 8, 9];
+  const metszet = [];
 
   let j;
   let k = 0;
 
-  for (let i = 0; i < T.length; i++) {
+  for (let i = 0; i < t.length; i++) {
     j = 0;
-    while (j < O.length && O[j] != T[i])
+    while (j < o.length && o[j] != t[i])
       j++;
-    if (j < O.length) {
-      Unio[k++] = T[i];
+      if (j < o.length) {
+      metszet[k++] = t[i];
     }
   }
   return {
-    unio: Unio
+    metszet: metszet
   }
 }
