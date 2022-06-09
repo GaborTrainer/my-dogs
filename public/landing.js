@@ -7,6 +7,7 @@ function myScript() {
   console.log(maximumKivalasztas());
   console.log(mimimumKivalasztas());
   console.log(metszetkepzes());
+  console.log(kivalasztas());
 }
 
 function eldontes() {
@@ -106,11 +107,25 @@ function metszetkepzes() {
     j = 0;
     while (j < o.length && o[j] != t[i])
       j++;
-      if (j < o.length) {
+    if (j < o.length) {
       metszet[k++] = t[i];
     }
   }
   return {
     metszet: metszet
+  }
+}
+
+function kivalasztas() {
+  const t = [1, 2, 3, 4, 5];
+  const x = 3;
+
+  let i = 0;
+  while (t[i] != x && i < t.length) {
+    i++;
+  }
+  let y = i + 1;
+  return {
+    x: x
   }
 }
