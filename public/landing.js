@@ -10,6 +10,7 @@ function myScript() {
   console.log(kivalasztas());
   console.log(linearisKereses());
   console.log(unio());
+  console.log(unio2());
 }
 
 function eldontes() {
@@ -164,10 +165,7 @@ function unio() {
     k++;
   }
   for (j = 0; j < b.length; j++) {
-
-
     const x = b[j];
-
     l = 0;
     while (z[l] != x && l < z.length) {
       l++;
@@ -176,13 +174,31 @@ function unio() {
       z[k] = x;
       k++;
     }
-
-    /*if (z.indexOf(x) === -1) {
-      z.push(x);
-    }*/
-
-
-
   }
   return z;
+}
+
+function unio2() {
+  const array1 = [1, 2, 3];
+  const array2 = [3, 4, 5];
+  const arrayUnio = [];
+
+  for (i=0;i<array1.length;i++) {
+    arrayUnio[i] = array1[i];
+  }
+
+  let k = array1.length;
+
+  for (j=0; j<array2.length;j++) {
+    let i = 0;
+    while (i<array1.length && array1[i] != array2[j]) {
+      i++;
+    }
+    if(i>=array1.length){
+      arrayUnio[k++] = array2[j];
+    }
+  }
+  return {
+    arrayUnio: arrayUnio
+  }
 }
